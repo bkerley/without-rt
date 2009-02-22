@@ -1,8 +1,9 @@
 require 'rubygems'
 require 'sinatra'
 require 'twitter'
+require 'login'
 
-t = Twitter::Base.new('without_rt', 'stop_all_retweets')
+t = Twitter::Base.new(*LOGIN_DATA)
 
 get '/' do
   "set your twitter client to point at this address instead of real twitter"
